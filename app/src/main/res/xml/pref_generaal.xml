@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:defaultValue=""
+        android:entries="@array/favorite"
+        android:entryValues="@array/favorite_values"
+        android:key="api_option"
+        android:summary=""
+        android:title="Change Movies "></ListPreference>
+</PreferenceScreen>

@@ -47,12 +47,19 @@ public class SideFragment extends Fragment implements View.OnClickListener {
 
     public void DataReceive() {
 
-        InitializeUI.text_TitleFilm = (TextView) view.findViewById(R.id.text_title);
-        InitializeUI.text_OverviewFilm = (TextView) view.findViewById(R.id.text_overview);
-        InitializeUI.text_ReleaseFilm = (TextView) view.findViewById(R.id.text_release_date);
-        InitializeUI.text_VoteFilm = (TextView) view.findViewById(R.id.text_vote_average);
-        InitializeUI.text_PopularityFilm = (TextView) view.findViewById(R.id.text_popularity_film);
-        InitializeUI.image_posterfilm = (ImageView) view.findViewById(R.id.img_poster);
+        TextView text_TitleFilm;
+        TextView text_OverviewFilm;
+        TextView text_VoteFilm;
+        TextView text_ReleaseFilm;
+        TextView text_PopularityFilm;
+        ImageView image_posterfilm;
+
+        text_TitleFilm = (TextView) view.findViewById(R.id.text_title);
+        text_OverviewFilm = (TextView) view.findViewById(R.id.text_overview);
+        text_ReleaseFilm = (TextView) view.findViewById(R.id.text_release_date);
+        text_VoteFilm = (TextView) view.findViewById(R.id.text_vote_average);
+        text_PopularityFilm = (TextView) view.findViewById(R.id.text_popularity_film);
+        image_posterfilm = (ImageView) view.findViewById(R.id.img_poster);
 
         try {
 
@@ -67,24 +74,23 @@ public class SideFragment extends Fragment implements View.OnClickListener {
                 jsonTrailer.JsonProcess_trailer(new ConnectionHttp().execute(c).get());
                 jsonReviews.JsonProcess(new ConnectionHttp().execute(review).get());
 
-                InitializeUI.text_TitleFilm.setText(args.getString("Title"));
-                InitializeUI.text_VoteFilm.setText("Vote : " + args.getString("vote"));
-                InitializeUI.text_PopularityFilm.setText("popularity : " + args.getString("popularity"));
-                InitializeUI.text_ReleaseFilm.setText("Release date : " + args.getString("release_date"));
-                InitializeUI.text_OverviewFilm.setText("Overview : " + args.getString("overview_film"));
-                Picasso.with(view.getContext()).load(String.valueOf(args.getString("poster"))).into(InitializeUI.image_posterfilm);
+                text_TitleFilm.setText(args.getString("Title"));
+                text_VoteFilm.setText("Vote : " + args.getString("vote"));
+                text_PopularityFilm.setText("popularity : " + args.getString("popularity"));
+                text_ReleaseFilm.setText("Release date : " + args.getString("release_date"));
+                text_OverviewFilm.setText("Overview : " + args.getString("overview_film"));
+                Picasso.with(view.getContext()).load(String.valueOf(args.getString("poster"))).into(image_posterfilm);
 
                 Trailer();
                 Review();
 
             } else if (args.get("id") == null) {
-
-                InitializeUI.text_TitleFilm.setText(args.getString("Title"));
-                InitializeUI.text_VoteFilm.setText("Vote : " + args.getString("vote"));
-                InitializeUI.text_PopularityFilm.setText("popularity : " + args.getString("popularity"));
-                InitializeUI.text_ReleaseFilm.setText("Release date : " + args.getString("release_date"));
-                InitializeUI.text_OverviewFilm.setText("Overview : " + args.getString("overview_film"));
-                Picasso.with(view.getContext()).load(String.valueOf(args.getString("poster"))).into(InitializeUI.image_posterfilm);
+                text_TitleFilm.setText(args.getString("Title"));
+                text_VoteFilm.setText("Vote : " + args.getString("vote"));
+                text_PopularityFilm.setText("popularity : " + args.getString("popularity"));
+                text_ReleaseFilm.setText("Release date : " + args.getString("release_date"));
+                text_OverviewFilm.setText("Overview : " + args.getString("overview_film"));
+                Picasso.with(view.getContext()).load(String.valueOf(args.getString("poster"))).into(image_posterfilm);
 
             }
 
@@ -149,13 +155,3 @@ public class SideFragment extends Fragment implements View.OnClickListener {
 }
 
 
-class InitializeUI {
-
-    static TextView text_TitleFilm;
-    static TextView text_OverviewFilm;
-    static TextView text_VoteFilm;
-    static TextView text_ReleaseFilm;
-    static TextView text_PopularityFilm;
-    static ImageView image_posterfilm;
-
-}
