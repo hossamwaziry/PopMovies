@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="favorite">
+
+        <item>@string/top_movie</item>
+        <item>@string/popular_movie</item>
+
+    </string-array>
+
+
+    <string-array name="favorite_values">
+
+        <item>https://api.themoviedb.org/3/movie/top_rated?api_key=</item>
+        <item>https://api.themoviedb.org/3/movie/popular?api_key=</item>
+
+    </string-array>
+
+</resources>
