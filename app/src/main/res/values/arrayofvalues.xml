@@ -11,8 +11,8 @@
 
     <string-array name="favorite_values">
 
-        <item>https://api.themoviedb.org/3/movie/top_rated?api_key=</item>
-        <item>https://api.themoviedb.org/3/movie/popular?api_key=</item>
+        <item>https://api.themoviedb.org/3/movie/top_rated?api_key=7cf37a5091b8776963c8b19b7b5ecff7</item>
+        <item>https://api.themoviedb.org/3/movie/popular?api_key=7cf37a5091b8776963c8b19b7b5ecff7</item>
 
     </string-array>
 

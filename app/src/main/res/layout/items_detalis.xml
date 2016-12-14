@@ -9,6 +9,7 @@
         android:id="@+id/card_DETALIS"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:orientation="vertical"
         card_view:cardCornerRadius="4dp"
         card_view:cardElevation="4dp">
@@ -31,6 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:layout_margin="4dp"
                 android:layout_weight=".75"
                 android:text="Trailer"
                 android:textSize="18sp" />
