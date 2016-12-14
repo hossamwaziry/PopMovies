@@ -7,7 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.hossam.popularmovies.DataProcess.Encap;
 import com.hossam.popularmovies.Fragments.MainFragment;
 import com.hossam.popularmovies.Fragments.SideFragment;
@@ -16,6 +19,7 @@ import com.hossam.popularmovies.R;
 public class Main extends AppCompatActivity {
 
     MainFragment mainFragment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +31,13 @@ public class Main extends AppCompatActivity {
         mainFragment = (MainFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_main);
 
         mainFragment.setMain(this);
+        Ads();
+    }
 
+    private void Ads() {
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     public void updateMovie(Encap encapOPject) {

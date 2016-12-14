@@ -24,6 +24,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.hossam.popularmovies.Activtiys.Main;
 import com.hossam.popularmovies.Activtiys.Settings;
 import com.hossam.popularmovies.Adapters.Adapter;
@@ -61,7 +63,15 @@ public class MainFragment extends Fragment implements View.OnClickListener {
 
         initViews();
         FapsButton();
+        Ads();
         return view;
+    }
+
+
+    private void Ads() {
+        AdView mAdView = (AdView) view.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     private void initViews() {

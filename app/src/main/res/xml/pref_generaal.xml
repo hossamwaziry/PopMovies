@@ -2,7 +2,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ListPreference
-        android:defaultValue=""
+        android:defaultValue="@string/top_movie"
         android:entries="@array/favorite"
         android:entryValues="@array/favorite_values"
         android:key="api_option"

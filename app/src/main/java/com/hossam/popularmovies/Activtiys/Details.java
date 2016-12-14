@@ -17,7 +17,6 @@ public class Details extends AppCompatActivity {
         setContentView(R.layout.activity_moviedetails);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
         setTitle("Details");
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.detalis_frame, new SideFragment()).commit();

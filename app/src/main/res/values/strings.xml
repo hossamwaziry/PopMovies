@@ -10,5 +10,5 @@
     <string name="title_activity_settings">Settings</string>
     <string name="top_movie">Top Movies</string>
     <string name="popular_movie">Popular Movies</string>
-
+    <string name="banner_ad_unit_id"></string>
 </resources>

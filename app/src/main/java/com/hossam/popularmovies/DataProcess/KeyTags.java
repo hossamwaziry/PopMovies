@@ -3,7 +3,7 @@ package com.hossam.popularmovies.DataProcess;
 
 public class KeyTags {
 
-    public final static String OwnKey = "7cf37a5091b8776963c8b19b7b5ecff7"; // Enter your key here
+    public final static String OwnKey = ""; // Enter your key here
 
     public final static String Api_url_pop = "https://api.themoviedb.org/3/movie/popular?api_key=" + OwnKey;
 
